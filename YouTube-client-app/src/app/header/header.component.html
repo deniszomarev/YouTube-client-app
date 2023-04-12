@@ -10,7 +10,11 @@
       <button>search</button>
     </div>
     <div class="search-settings">
-      <img src="../../assets/img/search_settings.svg" alt="search_settings" />
+      <img
+        src="../../assets/img/search_settings.svg"
+        alt="search_settings"
+        (click)="toggleDropdown()"
+      />
     </div>
   </div>
   <div class="login">
@@ -20,3 +24,4 @@
     </div>
   </div>
 </div>
+<app-dropdown-settings *ngIf="isDropdown"></app-dropdown-settings>

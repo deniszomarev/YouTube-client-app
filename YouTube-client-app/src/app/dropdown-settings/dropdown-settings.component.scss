@@ -1,0 +1,42 @@
+.dropdown {
+  background: #e5e5e5;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 479px;
+    height: 14px;
+    align-items: center;
+    .sorting {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      //   line-height: 14px;
+      color: #929292;
+      //   height: 14px;
+    }
+    .dropdown-btn {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #2f80ed;
+    }
+    .sort-input {
+      input {
+        width: 149px;
+        height: 14px;
+        border: none;
+        padding: 0px 0px;
+      }
+    }
+  }
+}
