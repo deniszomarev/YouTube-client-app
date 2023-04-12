@@ -1,0 +1,27 @@
+.header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 10vw 10px 30vw;
+  box-sizing: border-box;
+  background: #e5e5e5;
+  .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .logo {
+      margin: auto 0px;
+      height: 50px;
+    }
+    &-field {
+      margin: auto 0px auto 10px;
+    }
+  }
+  .login {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
