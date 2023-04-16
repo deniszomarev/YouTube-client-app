@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ResultSearchServiceService } from './result-search-service.service';
+import { Observable, map } from 'rxjs';
 
 @Component({
   selector: 'app-result-search',
@@ -7,10 +8,10 @@ import { ResultSearchServiceService } from './result-search-service.service';
   styleUrls: ['./result-search.component.scss'],
 })
 export class ResultSearchComponent implements OnInit {
+  public cards$: Observable<any> = this.resultSearchServiceService
+    .getResultSearch()
+    .pipe(map((res) => res.items));
   constructor(private resultSearchServiceService: ResultSearchServiceService) {}
 
-  ngOnInit(): void {
-    const result = this.resultSearchServiceService.getResultSearch();
-    console.log(result);
-  }
+  ngOnInit(): void {}
 }

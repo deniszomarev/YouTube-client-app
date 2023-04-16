@@ -1,4 +1,8 @@
 .result-search {
   box-sizing: border-box;
   padding: 31px 152px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }

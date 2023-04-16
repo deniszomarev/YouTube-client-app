@@ -51,6 +51,15 @@
     line-height: 23px;
     text-align: right;
     color: #4f4f4f;
+    // text-overflow: ellipsis;
+    // overflow: hidden;
+    span {
+      width: 223px;
+      display: inline-block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   }
   .main-btn {
     input {
