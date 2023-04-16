@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultSearchServiceService } from '../result-search/result-search-service.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   public isDropdown: boolean = false;
-  constructor() {}
+  constructor(private resultSearchService: ResultSearchServiceService) {}
 
   ngOnInit(): void {}
   public toggleDropdown(): void {
     this.isDropdown = !this.isDropdown;
+  }
+  public searchUpdate(): void {
+    this.resultSearchService.updateCards();
   }
 }

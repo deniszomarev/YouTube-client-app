@@ -8,10 +8,16 @@ import { Observable, map } from 'rxjs';
   styleUrls: ['./result-search.component.scss'],
 })
 export class ResultSearchComponent implements OnInit {
-  public cards$: Observable<any> = this.resultSearchServiceService
-    .getResultSearch()
-    .pipe(map((res) => res.items));
+  public cards: any;
   constructor(private resultSearchServiceService: ResultSearchServiceService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getCards();
+  }
+
+  public getCards(): void {
+    this.resultSearchServiceService.getCardsState().subscribe((res) => {
+      this.cards = res.items;
+    });
+  }
 }
