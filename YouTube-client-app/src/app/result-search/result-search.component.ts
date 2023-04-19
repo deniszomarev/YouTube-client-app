@@ -20,4 +20,5 @@ export class ResultSearchComponent implements OnInit {
       this.cards = res.items;
     });
   }
+
 }

@@ -2,10 +2,20 @@
   <div class="dropdown-group">
     <div class="sorting">Sorting by:</div>
     <div class="date">
-      <a class="dropdown-btn" href="#">date</a>
+      <a
+        class="dropdown-btn"
+        href="#"
+        (click)="resultSearchServiceService.sortCardsBy('publishedAt', 'asc')"
+        >date</a
+      >
     </div>
     <div class="count">
-      <a class="dropdown-btn" href="#">count of views</a>
+      <a
+        class="dropdown-btn"
+        href="#"
+        (click)="resultSearchServiceService.sortCardsBy('viewCount', 'asc')"
+        >count of views</a
+      >
     </div>
     <div class="byword">
       <a class="dropdown-btn" href="#">by word or sentance</a>
