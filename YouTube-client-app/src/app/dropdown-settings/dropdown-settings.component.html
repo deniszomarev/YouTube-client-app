@@ -2,18 +2,12 @@
   <div class="dropdown-group">
     <div class="sorting">Sorting by:</div>
     <div class="date">
-      <a
-        class="dropdown-btn"
-        href="#"
-        (click)="resultSearchServiceService.sortCardsBy('publishedAt', 'asc')"
+      <a class="dropdown-btn" href="#" (click)="sortCardsBy('publishedAt')"
         >date</a
       >
     </div>
     <div class="count">
-      <a
-        class="dropdown-btn"
-        href="#"
-        (click)="resultSearchServiceService.sortCardsBy('viewCount', 'asc')"
+      <a class="dropdown-btn" href="#" (click)="sortCardsBy('viewCount')"
         >count of views</a
       >
     </div>

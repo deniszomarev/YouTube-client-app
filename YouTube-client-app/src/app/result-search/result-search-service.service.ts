@@ -20,7 +20,7 @@ export class ResultSearchServiceService {
 
   public sortCardsBy(property: string, order: 'asc' | 'desc'): void {
     const currentCardsState = this.cardsState$.value;
-    currentCardsState.items.sort((a: any, b: any) => {
+    currentCardsState.items?.sort((a: any, b: any) => {
       if (property == 'publishedAt') {
         return order === 'asc'
           ? new Date(a.snippet[property]).getTime() -
