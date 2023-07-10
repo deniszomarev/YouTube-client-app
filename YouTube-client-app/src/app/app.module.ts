@@ -8,6 +8,8 @@ import { DropdownSettingsComponent } from './dropdown-settings/dropdown-settings
 import { ResultSearchComponent } from './result-search/result-search.component';
 import { CardComponent } from './result-search/card/card.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './shared/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     DropdownSettingsComponent,
     ResultSearchComponent,
     CardComponent,
+    FilterPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

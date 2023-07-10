@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ResultSearchServiceService } from '../result-search/result-search-service.service';
 
 @Component({
@@ -7,11 +7,16 @@ import { ResultSearchServiceService } from '../result-search/result-search-servi
   styleUrls: ['./dropdown-settings.component.scss'],
 })
 export class DropdownSettingsComponent implements OnInit {
+  @Output() inputChanged: EventEmitter<string> = new EventEmitter<string>();
   private order: 'asc' | 'desc' | undefined;
   private prevProperty: string | undefined;
   constructor(public resultSearchServiceService: ResultSearchServiceService) {}
 
   ngOnInit(): void {}
+  public onInputChange(value: string) {
+    this.inputChanged.emit(value);
+    // console.log(value);
+  }
 
   public sortCardsBy(property: string): void {
     this.order =
