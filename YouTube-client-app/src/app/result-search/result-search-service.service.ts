@@ -7,6 +7,7 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 })
 export class ResultSearchServiceService {
   private cardsState$: BehaviorSubject<any> = new BehaviorSubject({});
+  private filterState$: BehaviorSubject<string> = new BehaviorSubject('');
   constructor(private http: HttpClient) {}
 
   public updateCards(): void {
@@ -34,5 +35,12 @@ export class ResultSearchServiceService {
       }
     });
     this.cardsState$.next(currentCardsState);
+  }
+
+  public updateFilter(value: string): void {
+    this.filterState$.next(value);
+  }
+  public getFilterState(): Observable<string> {
+    return this.filterState$.asObservable();
   }
 }

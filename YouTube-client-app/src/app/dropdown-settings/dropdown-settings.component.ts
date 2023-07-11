@@ -7,16 +7,12 @@ import { ResultSearchServiceService } from '../result-search/result-search-servi
   styleUrls: ['./dropdown-settings.component.scss'],
 })
 export class DropdownSettingsComponent implements OnInit {
-  @Output() inputChanged: EventEmitter<string> = new EventEmitter<string>();
+  public inputFilter: string = '';
   private order: 'asc' | 'desc' | undefined;
   private prevProperty: string | undefined;
   constructor(public resultSearchServiceService: ResultSearchServiceService) {}
 
   ngOnInit(): void {}
-  public onInputChange(value: string) {
-    this.inputChanged.emit(value);
-    // console.log(value);
-  }
 
   public sortCardsBy(property: string): void {
     this.order =
@@ -28,5 +24,8 @@ export class DropdownSettingsComponent implements OnInit {
     this.prevProperty = property;
 
     this.resultSearchServiceService.sortCardsBy(property, this.order);
+  }
+  public setFilter(inputFilter: string) {
+    this.resultSearchServiceService.updateFilter(inputFilter);
   }
 }

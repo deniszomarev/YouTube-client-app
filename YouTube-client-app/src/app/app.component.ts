@@ -7,7 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'YouTube-client-app';
-  public handlerSearchEvent(inputSearch: string) {
-    console.log(inputSearch);
-  }
 }

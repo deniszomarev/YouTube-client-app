@@ -15,8 +15,7 @@
       <a class="dropdown-btn" href="#">by word or sentance</a>
     </div>
     <div class="sort-input">
-      <input ngModel (ngModelChange)="onInputChange($event)" type="search" />
-      <!-- {{ inputFilter }} -->
+      <input ngModel (ngModelChange)="setFilter($event)" type="search" />
     </div>
   </div>
 </div>
