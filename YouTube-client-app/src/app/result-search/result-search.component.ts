@@ -8,7 +8,7 @@ import { Observable, map } from 'rxjs';
   styleUrls: ['./result-search.component.scss'],
 })
 export class ResultSearchComponent implements OnInit {
-  public cards: any;
+  public cards: any = [];
   public searchValue: string = '';
   constructor(private resultSearchServiceService: ResultSearchServiceService) {}
 

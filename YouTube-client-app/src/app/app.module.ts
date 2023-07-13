@@ -10,6 +10,7 @@ import { CardComponent } from './result-search/card/card.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './shared/pipes/filter.pipe';
+import { BorderColorDirective } from './shared/directives/border-color.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FilterPipe } from './shared/pipes/filter.pipe';
     ResultSearchComponent,
     CardComponent,
     FilterPipe,
+    BorderColorDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
