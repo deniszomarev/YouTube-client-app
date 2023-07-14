@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { ResultSearchServiceService } from './result-search-service.service';
 import { Observable, map } from 'rxjs';
+import { ResultSearchServiceService } from 'src/app/core/services/result-search-service/result-search-service.service';
 
 @Component({
   selector: 'app-result-search',

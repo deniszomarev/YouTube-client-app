@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResultSearchServiceService } from '../../../youtube/components/result-search/result-search-service.service';
+import { ResultSearchServiceService } from '../../services/result-search-service/result-search-service.service';
 
 @Component({
   selector: 'app-header',
