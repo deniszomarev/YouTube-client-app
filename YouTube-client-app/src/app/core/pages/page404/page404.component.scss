@@ -1,0 +1,31 @@
+.content-404 {
+  position: absolute;
+  top: calc(50% - 80px);
+  left: calc(50% - 180px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 360px;
+  height: 100px;
+  align-items: center;
+}
+
+.logo-404 {
+  width: 100px;
+  height: 100px;
+  padding: 4px 0px;
+  box-sizing: border-box;
+}
+
+.text-404 {
+  height: 56px;
+  width: 233px;
+  span {
+    color: #828282;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
