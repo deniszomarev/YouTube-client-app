@@ -6,6 +6,7 @@ import { Page404Component } from './core/pages/page404/page404.component';
 const routes: Routes = [
   { path: '', component: ResultSearchComponent },
   { path: '**', component: Page404Component },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
