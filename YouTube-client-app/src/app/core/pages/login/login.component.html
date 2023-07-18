@@ -1,12 +1,16 @@
-<div class="login">
+<form class="login" [formGroup]="loginForm" (ngSubmit)="submit()">
   <span class="login__title">Login</span>
   <div class="login__input_container">
     <span>login</span>
-    <input type="text" placeholder="Done Joe" />
+    <input type="text" placeholder="Done Joe" formControlName="login" />
   </div>
   <div class="login__input_container">
     <span>password</span>
-    <input type="password" placeholder="***********" />
+    <input
+      type="password"
+      placeholder="***********"
+      formControlName="password"
+    />
   </div>
-  <button class="button_big">Login</button>
-</div>
+  <button type="submit" class="button_big">Login</button>
+</form>
