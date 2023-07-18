@@ -1,0 +1,82 @@
+.login {
+  width: 344px;
+  height: 248px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 28px 20px 24px 20px;
+  position: absolute;
+  top: calc(50% - 124px);
+  left: calc(50% - 172px);
+
+  &__title {
+    color: #000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 11px;
+  }
+  &__input_container {
+    width: 304px;
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 5px;
+    span {
+      color: #828282;
+      font-family: Roboto;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-left: 6px;
+    }
+    input {
+      width: 304px;
+      height: 37px;
+      background: #e0e0e0;
+      border-color: #e0e0e0;
+      padding: 0px;
+      border-width: 0px;
+      box-sizing: border-box;
+      padding: 8px;
+      color: #000;
+      font-family: Roboto;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      &::placeholder {
+        color: #828282;
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+  .button_big {
+    width: 124px;
+    height: 30px;
+    box-shadow: 2px 0px 4px 0px #2f80ed;
+    background-color: #2f80ed;
+    padding: 0px;
+    border-width: 0px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: calc(22px - 5px);
+    margin-left: calc(200px - 20px);
+  }
+}
