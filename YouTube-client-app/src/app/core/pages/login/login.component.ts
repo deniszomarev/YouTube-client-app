@@ -16,14 +16,14 @@ export class LoginComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.loginForm.patchValue({ login: 'privet' });
-    this.loginForm.get('login')?.disable();
-    this.loginForm.valueChanges.subscribe((value) => console.log(value));
+    // this.loginForm.patchValue({ login: 'privet' });
+    // this.loginForm.get('login')?.disable();
+    // this.loginForm.valueChanges.subscribe((value) => console.log(value));
   }
 
   public submit() {
-    console.log(this.loginForm);
-    console.log(this.loginForm.getRawValue());
-    console.log(this.loginForm.value);
+    // console.log(this.loginForm);
+    // console.log(this.loginForm.getRawValue());
+    // console.log(this.loginForm.value);
   }
 }
