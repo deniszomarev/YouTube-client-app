@@ -13,7 +13,7 @@ export class LoginService {
     localStorage.setItem('fakeToken', this.authToken);
   }
   public getToken() {
-    localStorage.getItem('fakeToken');
+    return localStorage.getItem('fakeToken');
   }
   public deleteToken() {
     localStorage.removeItem('fakeToken');
