@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { __values } from 'tslib';
+import { LoginService } from '../../services/login-service/login.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,17 +14,23 @@ export class LoginComponent implements OnInit {
     password: new FormControl(null),
   });
 
-  constructor() {}
+  constructor(
+    private loginService: LoginService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.loginForm.patchValue({ login: 'privet' });
-    this.loginForm.get('login')?.disable();
-    this.loginForm.valueChanges.subscribe((value) => console.log(value));
+    // this.loginForm.patchValue({ login: 'privet' });
+    // this.loginForm.get('login')?.disable();
+    // this.loginForm.valueChanges.subscribe((value) => console.log(value));
   }
 
   public submit() {
-    console.log(this.loginForm);
-    console.log(this.loginForm.getRawValue());
-    console.log(this.loginForm.value);
+    // console.log(this.loginForm);
+    // console.log(this.loginForm.getRawValue());
+    // console.log(this.loginForm.value);
+    this.loginService.setToken();
+    this.router.navigate(['../'], { relativeTo: this.activatedRoute });
   }
 }
