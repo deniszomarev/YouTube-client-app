@@ -22,6 +22,9 @@
     <div class="login-logo">
       <img src="../../assets/img/login_logo.svg" alt="login_logo" />
     </div>
+    <div *ngIf="hideLogout()" class="search-button">
+      <button (click)="logout()">logout</button>
+    </div>
   </div>
 </div>
 <app-dropdown-settings *ngIf="isDropdown"></app-dropdown-settings>

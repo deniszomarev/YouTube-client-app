@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
   CanActivate,
+  Router,
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
@@ -12,7 +13,7 @@ import { LoginService } from '../services/login-service/login.service';
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  constructor(private loginService: LoginService) {}
+  constructor(private loginService: LoginService, private router: Router) {}
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -25,6 +26,8 @@ export class AuthGuard implements CanActivate {
   }
 
   private isLoggedIn() {
-    return !!this.loginService.getToken();
+    return (
+      !!this.loginService.getToken() || this.router.createUrlTree(['login'])
+    );
   }
 }
