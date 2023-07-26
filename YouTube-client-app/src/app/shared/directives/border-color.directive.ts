@@ -11,7 +11,7 @@ import {
 })
 export class BorderColorDirective implements OnInit {
   @Input() cardDate: string = '';
-  public currentDate: string = '2019-09-16T19:52:11.137Z';
+  public currentDate: string = '2019-10-30T19:52:11.137Z';
   constructor(private elementRef: ElementRef) {}
   ngOnInit(): void {
     const dateDiff: number = Math.ceil(
@@ -34,3 +34,6 @@ export class BorderColorDirective implements OnInit {
     }
   }
 }
+// "publishedAt": "2019-10-29T15:00:14.000Z",
+//         "channelId": "UCg8ss4xW9jASrqWGP30jXiw",
+//         "title": "Angular 40 вопросов для собеседования",
