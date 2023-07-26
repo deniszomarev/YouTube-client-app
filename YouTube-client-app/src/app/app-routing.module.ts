@@ -4,10 +4,12 @@ import { ResultSearchComponent } from './youtube/components/result-search/result
 import { Page404Component } from './core/pages/page404/page404.component';
 import { LoginComponent } from './core/pages/login/login.component';
 import { AuthGuard } from './core/guards/auth.guard';
+import { DetailsComponent } from './core/pages/details/details.component';
 
 const routes: Routes = [
   { path: '', canActivate: [AuthGuard], component: ResultSearchComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'details/:id', component: DetailsComponent },
   { path: '**', component: Page404Component },
 ];
 

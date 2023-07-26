@@ -1,0 +1,117 @@
+.video-card {
+  width: 1200px;
+  height: 461px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 44px auto 0px auto;
+
+  button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0px;
+    background-color: transparent;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #e5e5e5;
+    box-shadow: 5px 10px 20px 0px rgba(51, 51, 51, 0.25);
+    border-radius: 0px 5px 5px 0px;
+    &-info {
+      width: 436px;
+      height: 461px;
+      display: flex;
+      flex-direction: column;
+      //   justify-content: space-between;
+      align-items: center;
+    }
+    &-title {
+      height: 101px;
+      width: 100%;
+      padding: 35px 34px 0px 34px;
+      box-sizing: border-box;
+      overflow: hidden;
+      h1 {
+        margin: 0px;
+        color: #000;
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+    &-date {
+      height: 12px;
+      width: 100%;
+      padding: 0px 34px;
+      box-sizing: border-box;
+      color: #828282;
+      text-align: center;
+      font-family: Roboto;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &-discription {
+      height: 330px;
+      width: 100%;
+      padding: 0px 34px;
+      box-sizing: border-box;
+      color: #828282;
+      font-family: Roboto;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      h2 {
+        margin: 0px;
+        color: #000;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    &-statistics {
+      width: 100%;
+      padding: 0px 34px;
+      box-sizing: border-box;
+      height: 13px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 17px;
+      margin-bottom: 24px;
+      .stats-text {
+        margin-left: 3px;
+        color: #000;
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    &-video {
+      width: 729px;
+      height: 461px;
+      img {
+        width: 729px;
+        height: 461px;
+      }
+    }
+
+    &-footer {
+      height: 5px;
+      width: 100%;
+      background-color: #2f80ed;
+    }
+  }
+}

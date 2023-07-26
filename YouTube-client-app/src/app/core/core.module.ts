@@ -5,9 +5,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { Page404Component } from './pages/page404/page404.component';
 import { LoginComponent } from './pages/login/login.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 @NgModule({
-  declarations: [DropdownSettingsComponent, HeaderComponent, Page404Component, LoginComponent],
+  declarations: [DropdownSettingsComponent, HeaderComponent, Page404Component, LoginComponent, DetailsComponent],
   imports: [CommonModule, SharedModule],
   exports: [HeaderComponent],
 })
