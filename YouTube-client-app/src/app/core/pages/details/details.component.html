@@ -54,34 +54,35 @@
   </button>
   <div class="card">
     <div class="card-video">
-      <img src="https://i.ytimg.com/vi/YN8zNnV0sK8/maxresdefault.jpg" alt="" />
+      <img [src]="card.snippet?.thumbnails.maxres.url" alt="" />
     </div>
     <div class="card-info">
-      <div class="card-title"><h1>Kuji Podcast #20</h1></div>
-      <div class="card-date">Thursday, December 20, 2019</div>
+      <div class="card-title">
+        <h1>{{ card.snippet?.title }}</h1>
+      </div>
+      <div class="card-date">
+        {{ card.snippet?.publishedAt | date : "fullDate" }}
+      </div>
       <div class="card-discription">
         <h2>Description:</h2>
-        This Is KuJi Podcast. In this issue, Timur karginov, Andrey Konyaev and
-        Nurlan Saburov discuss the end of 2018: Khabib's fight with McGregor,
-        Kokorin and Mamayev, Urgant's show on channel One, the economic crisis
-        and gifts for loved ones.
+        {{ card.snippet?.description }}
       </div>
       <div class="card-statistics">
         <div class="views">
           <img src="../../../assets/img/viewed.svg" alt="views_img" />
-          <span class="stats-text">11111</span>
+          <span class="stats-text">{{ card.statistics?.viewCount }}</span>
         </div>
         <div class="likes">
           <img src="../../../assets/img/liked.svg" alt="like_img" />
-          <span class="stats-text">11111</span>
+          <span class="stats-text">{{ card.statistics?.likeCount }}</span>
         </div>
         <div class="dislikes">
           <img src="../../../assets/img/dislike.svg" alt="dislike_img" />
-          <span class="stats-text">11111</span>
+          <span class="stats-text">{{ card.statistics?.dislikeCount }}</span>
         </div>
         <div class="comments">
           <img src="../../../assets/img/comments.svg" alt="comments_img" />
-          <span class="stats-text">11111</span>
+          <span class="stats-text">{{ card.statistics?.commentCount }}</span>
         </div>
       </div>
       <div class="card-footer"></div>

@@ -12,6 +12,7 @@
     border: none;
     padding: 0px;
     background-color: transparent;
+    cursor: pointer;
   }
   .card {
     display: flex;
@@ -68,6 +69,8 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      overflow: auto;
+      white-space: break-spaces;
       h2 {
         margin: 0px;
         color: #000;
