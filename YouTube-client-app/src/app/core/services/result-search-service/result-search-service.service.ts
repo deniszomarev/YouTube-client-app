@@ -41,7 +41,7 @@ export class ResultSearchServiceService {
       }
     });
     this.cardsState$.next(currentCardsState);
-    console.log(currentCardsState);
+    // console.log(currentCardsState);
   }
 
   public updateFilter(value: string): void {
