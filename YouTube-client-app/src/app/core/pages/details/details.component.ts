@@ -28,4 +28,7 @@ export class DetailsComponent implements OnInit {
         }
       });
   }
+  public returnBack(): void {
+    this.router.navigate(['/']);
+  }
 }

@@ -7,10 +7,23 @@ import { AuthGuard } from './core/guards/auth.guard';
 import { DetailsComponent } from './core/pages/details/details.component';
 
 const routes: Routes = [
-  { path: '', canActivate: [AuthGuard], component: ResultSearchComponent },
+  {
+    path: '',
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: '',
+        component: ResultSearchComponent,
+      },
+      {
+        path: 'details/:id',
+        component: DetailsComponent,
+      },
+    ],
+  },
   { path: 'login', component: LoginComponent },
-  { path: 'details/:id', component: DetailsComponent },
-  { path: '**', component: Page404Component },
+  { path: '404', component: Page404Component },
+  { path: '**', redirectTo: '404' },
 ];
 
 @NgModule({
