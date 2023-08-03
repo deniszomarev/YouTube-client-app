@@ -15,14 +15,16 @@ export class ResultSearchServiceService {
   public updateCards(): void {
     this.http
       .get(
-        `https://youtube.googleapis.com/youtube/v3/videos?chart=mostPopular&key=${API_KEY}&type=video&part=snippet,contentDetails,statistics`
+        `https://youtube.googleapis.com/youtube/v3/videos?chart=mostPopular&key=${API_KEY}&type=video&part=snippet,contentDetails,statistics&maxResults=50`
       )
       .subscribe((res) => this.cardsState$.next(res));
   }
   public getCardById(id: string | null): Observable<any> {
     return this.http
-      .get('assets/response.json')
-      .pipe(map((res: any) => res.items.find((el: any) => el.id === id)));
+      .get(
+        `https://youtube.googleapis.com/youtube/v3/videos?id=${id}&key=${API_KEY}&type=video&part=snippet,contentDetails,statistics`
+      )
+      .pipe(map((res: any) => res.items[0]));
   }
 
   public getCardsState(): Observable<any> {

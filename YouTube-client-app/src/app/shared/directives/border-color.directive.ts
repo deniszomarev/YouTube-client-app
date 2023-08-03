@@ -11,7 +11,7 @@ import {
 })
 export class BorderColorDirective implements OnInit {
   @Input() cardDate: string = '';
-  public currentDate: string = '2019-10-30T19:52:11.137Z';
+  public currentDate: string = new Date().toISOString();
   constructor(private elementRef: ElementRef) {}
   ngOnInit(): void {
     const dateDiff: number = Math.ceil(
