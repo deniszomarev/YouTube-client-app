@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, map, tap } from 'rxjs';
+const API_KEY: string = 'AIzaSyC0Qk0kpYacHnDwnuFoLmU29g89SBqEc1c';
 
 @Injectable({
   providedIn: 'root',
@@ -8,12 +9,15 @@ import { BehaviorSubject, Observable, map, tap } from 'rxjs';
 export class ResultSearchServiceService {
   private cardsState$: BehaviorSubject<any> = new BehaviorSubject({});
   private filterState$: BehaviorSubject<string> = new BehaviorSubject('');
+
   constructor(private http: HttpClient) {}
 
   public updateCards(): void {
-    this.http.get('assets/response.json').subscribe((res) => {
-      this.cardsState$.next(res);
-    });
+    this.http
+      .get(
+        `https://youtube.googleapis.com/youtube/v3/videos?chart=mostPopular&key=${API_KEY}&type=video&part=snippet,contentDetails,statistics`
+      )
+      .subscribe((res) => this.cardsState$.next(res));
   }
   public getCardById(id: string | null): Observable<any> {
     return this.http
@@ -41,7 +45,6 @@ export class ResultSearchServiceService {
       }
     });
     this.cardsState$.next(currentCardsState);
-    // console.log(currentCardsState);
   }
 
   public updateFilter(value: string): void {

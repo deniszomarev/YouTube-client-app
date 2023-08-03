@@ -1,7 +1,7 @@
 <div class="result-search">
   <app-card
     appBorderColor
-    *ngFor="let card of cards | filter : searchValue"
+    *ngFor="let card of cards"
     [item]="card"
     [cardDate]="card.snippet.publishedAt"
   ></app-card>
