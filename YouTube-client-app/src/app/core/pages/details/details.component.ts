@@ -18,6 +18,7 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
     const cardIdFromUrl: string | null =
       this.activatedRoute.snapshot.paramMap.get('id');
+    console.log(cardIdFromUrl);
     this.resultSearchServiceService
       .getCardById(cardIdFromUrl)
       .subscribe((cardFromJson) => {

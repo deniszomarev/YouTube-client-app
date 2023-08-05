@@ -14,6 +14,7 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {}
 
   public getDetails(): void {
-    this.router.navigate(['details', this.item.id]);
+    console.log(this.item.id || this.item.id.videoId);
+    this.router.navigate(['details', this.item.id.videoId || this.item.id]);
   }
 }

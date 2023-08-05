@@ -19,6 +19,14 @@ export class ResultSearchServiceService {
       )
       .subscribe((res) => this.cardsState$.next(res));
   }
+  public updateCardsBySearch(keyWord:string):void {
+    this.http
+      .get(
+        `https://youtube.googleapis.com/youtube/v3/search?q=${keyWord}&key=${API_KEY}&type=video&part=snippet&maxResults=50`
+      )
+      .subscribe((res) => this.cardsState$.next(res));
+  }
+
   public getCardById(id: string | null): Observable<any> {
     return this.http
       .get(

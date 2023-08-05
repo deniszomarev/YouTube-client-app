@@ -5,11 +5,11 @@
   <div class="stats">
     <div class="views">
       <img src="../../../assets/img/viewed.svg" alt="views_img" />
-      <span class="stats-text">{{ item.statistics.viewCount }}</span>
+      <span class="stats-text">{{ item.statistics?.viewCount }}</span>
     </div>
     <div class="likes">
       <img src="../../../assets/img/liked.svg" alt="like_img" />
-      <span class="stats-text">{{ item.statistics.likeCount }}</span>
+      <span class="stats-text">{{ item.statistics?.likeCount }}</span>
     </div>
     <!-- <div class="dislikes">
       <img src="../../../assets/img/dislike.svg" alt="dislike_img" />
@@ -17,7 +17,7 @@
     </div> -->
     <div class="comments">
       <img src="../../../assets/img/comments.svg" alt="comments_img" />
-      <span class="stats-text">{{ item.statistics.commentCount }}</span>
+      <span class="stats-text">{{ item.statistics?.commentCount }}</span>
     </div>
   </div>
   <div class="title">

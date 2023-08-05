@@ -3,12 +3,13 @@
     <div class="logo">
       <img src="../../assets/img/logo.svg" alt="logo" />
     </div>
-    <div class="search-field">
-      <input type="search" placeholder="What are you want to find out?" />
-    </div>
-    <div class="search-button">
-      <button (click)="searchUpdate()">search</button>
-    </div>
+    <form class="search-field" [formGroup]="searchForm">
+      <input
+        type="search"
+        placeholder="What are you want to find out?"
+        formControlName="search"
+      />
+    </form>
     <div class="search-settings">
       <img
         src="../../assets/img/search_settings.svg"
