@@ -3,6 +3,7 @@ import { ResultSearchServiceService } from '../../services/result-search-service
 import { LoginService } from '../../services/login-service/login.service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
+import { debounceTime, filter } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -22,9 +23,17 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.resultSearchService.updateCards();
-    this.searchForm.valueChanges.subscribe((searchValue) =>
-      this.searchUpdate(searchValue.search)
-    );
+    this.searchForm.valueChanges
+      .pipe(
+        debounceTime(1000),
+        filter((searchValue) => searchValue.search.length >= 3)
+      )
+      .subscribe((searchValue) => this.searchUpdate(searchValue.search));
+  }
+
+  public redirectToMainPage(): void {
+    this.router.navigate(['']);
+    this.resultSearchService.updateCards();
   }
 
   public toggleDropdown(): void {
