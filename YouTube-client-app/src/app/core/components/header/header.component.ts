@@ -47,6 +47,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['login']);
   }
   public hideLogout(): boolean {
+    console.log('hideLoguot')
     return !!this.loginService.getToken();
   }
 }

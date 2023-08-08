@@ -54,7 +54,7 @@
   </button>
   <div class="card">
     <div class="card-video">
-      <img [src]="card.snippet?.thumbnails.maxres.url" alt="" />
+      <img [src]="card.snippet?.thumbnails.standard.url" alt="" />
     </div>
     <div class="card-info">
       <div class="card-title">
@@ -76,10 +76,6 @@
           <img src="../../../assets/img/liked.svg" alt="like_img" />
           <span class="stats-text">{{ card.statistics?.likeCount }}</span>
         </div>
-        <!-- <div class="dislikes">
-          <img src="../../../assets/img/dislike.svg" alt="dislike_img" />
-          <span class="stats-text">{{ card.statistics?.dislikeCount }}</span>
-        </div> -->
         <div class="comments">
           <img src="../../../assets/img/comments.svg" alt="comments_img" />
           <span class="stats-text">{{ card.statistics?.commentCount }}</span>
